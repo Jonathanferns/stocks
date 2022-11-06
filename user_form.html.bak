@@ -14,7 +14,7 @@
   <input type="email" id="email" name="email"><br></br>
 
 
-<form class="pure-form">
+<form> class="pure-form">
         <label for="email">Enter password:</label>
 		
 		<input type="password" placeholder="Password" id="password" required>
