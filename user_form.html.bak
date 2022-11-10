@@ -2,9 +2,9 @@
 <body bgcolor="orange"> 
 
 
-<h1>Registration Form</h1>
+<h1>User Form</h1>
 
-<form action="/action_page.php">
+<form action="connect.php" method="post">
   <label for="fname">Name:</label>
   <input type="text" id="fname" name="fname" value="">
   <br></br>
@@ -13,33 +13,26 @@
   <label for="email">email:</label>
   <input type="email" id="email" name="email"><br></br>
 
-
-<form> class="pure-form">
         <label for="email">Enter password:</label>
 		
-		<input type="password" placeholder="Password" id="password" required>
+		<input type="password" placeholder="Password" id="password" name="password" required>
 		
-        <input type="password" placeholder="Confirm Password" id="confirm_password" required>
-
-  
- </form>
+        <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" required>
 <p>Branch:</p>
-<form>
 
-  <input type="radio" id="html" name="fav_language" value="HTML">
+  <input type="radio" id="branch" name="branch" value="HTML">
   <label for="html">Computer</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
+  <input type="radio" id="branch" name="branch" value="CSS">
   <label for="css">Electrical</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <input type="radio" id="branch" name="branch" value="JavaScript">
   <label for="javascript">Machanical</label>
-</form>
 
 <p>Role:</p>
 
 
-  <input type="radio" id="html" name="fav_language" value="HTML">
+  <input type="radio" id="role" name="role" value="HTML">
   <label for="html">Admin</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
+  <input type="radio" id="role" name="role" value="CSS">
   <label for="css">Guest</label><br>
 
 
