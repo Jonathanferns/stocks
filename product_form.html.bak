@@ -33,7 +33,7 @@
   max-width: 400px;
   padding: 50px;
   background-color: gray;
-  opacity: 0.9;
+  opacity: 0.2;
 }
 
 /* Full-width input fields */
