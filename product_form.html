@@ -1,0 +1,39 @@
+<Html>  
+    <head>   
+    <title>  
+    Product
+    </title>  
+    </head>  
+    <body bgcolor="violet">  
+    <br> 
+    <h1>Product Form</h1> 
+    <br>  
+  <form action="connect.php" method="post"> 
+      
+    <label> Name: </label>         
+    <input type="text" id="Name" size="15"/> <br> <br>  
+    <br>
+
+    <label for="date_of_purchase">Date of purchase:</label>
+    <input type="date" id="purchase" name="purchase" value=""><br>
+  
+      </br>
+    Branch :  
+</label><br>  
+<input type="radio" id="computer" name="branch" value="computer"> Computer <br>  
+<input type="radio" id="mechanical"name="branch" value="mechanical" /> Mechanical<br>  
+<input type="radio" id="electrical"name="branch" value="electrical" /> Electrical 
+<br>  
+<br>
+<label for="quantity">Warranty period(between 1 and 7):</label>
+<input type="number" id="quantity" name="quantity" min="1" max="7">
+<br>
+<br><label>
+  <input type="submit"  value="Submit"
+</label>
+
+</form>
+<br></br>
+</body>
+  
+ </html> 
