@@ -57,7 +57,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
+ $user_pass = password_hash($_POST['password'],PASSWORD_DEFAULT);
+ 
 $sql = "INSERT INTO users VALUES ('".$fname."', '".$email."','".$user_pass."','".$Branch."','".$status."','".$role."','','',' ')";
 
 if ($conn->query($sql) === TRUE) {

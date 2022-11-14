@@ -17,7 +17,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO product (id, name, date_of_purchase, Branch, warranty_period, created_at, updated_at ) VALUES ('"."', '".$fname."', '".$date_of_purchase."','".$Branch."','".$warranty_period."''','1', '', '')";
+$sql = "INSERT INTO product  VALUES (id, name, date_of_purchase, Branch, warranty_period, created_at, updated_at ) VALUES ('', '".$fname."', '".$date_of_purchase."','".$Branch."','".$warranty_period."''','1', '', '')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

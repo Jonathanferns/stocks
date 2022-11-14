@@ -1,19 +1,35 @@
-
+<!DOCTYPE html>
 <html>
-<body bgcolor="gray"> 
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
+<head>
+  <title></title>
+</head>
+<body bgcolor="gray">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script> 
+  <style>
+  body, html {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-}
+  }
 
-* {
+  * {
   box-sizing: border-box;
-}
+  }
 
-.bg-img {
+  .bg-img {
   /* The image used */
   background-image: url("background.jpg");
 
@@ -24,10 +40,10 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
+  }
 
-/* Add styles to the form container */
-.container {
+  /* Add styles to the form container */
+  .container {
   position: relative;
   right: -90;
   margin: 20px;
@@ -35,24 +51,24 @@ body, html {
   padding: 16px;
   background-color: white;
   opacity: 0.8;
-}
+  }
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
   width: 102%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background:  #f1f1f1;
-}
+  }
 
-input[type=text]:focus, input[type=password]:focus {
+  input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
-}
+  }
 
-/* Set a style for the submit button */
-.btn {
+  /* Set a style for the submit button */
+  .btn {
   background-color: #04AA6D;
   color: white;
   padding: 16px 20px;
@@ -60,57 +76,27 @@ input[type=text]:focus, input[type=password]:focus {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
-}
+  }
 
-.btn:hover {
+  .btn:hover {
   opacity: 1;
-}
-</style>
-
-<div class="bg-img">
-
-<form action="connect.php" method="post" class="container">
-<h1>User Form</h1>
-  <label for="fname"><b>Name:<b></label>
-  <input type="text" placeholder="Enter name" id="fname" name="fname" value="">
-  <br></br>
-  
- 
-  <label for="email">Email:</label>
-    <input type="text" placeholder="Enter email" id="email" name="email" required>
-
-        <label for="email">Enter password:</label>
-		
-		<input type="password" placeholder="Password" id="password" name="password" required>
-		
-        <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" required>
-    
-    <label for="branch"><b>Branch</b></label><br>
-  
-  <input type="radio" id="branch" name="branch" value="Computer">
-  <label for="html">Computer</label><br>
-  <input type="radio" id="branch" name="branch" value="Electrical">
-  <label for="css">Electrical</label><br>
-  <input type="radio" id="branch" name="branch" value="Machanical">
-  <label for="javascript">Machanical</label><br></br>
-  
-  
-  <p>Role:</p>
-
-
-  <input type="radio" id="role" name="role" value="Admin">
-  <label for="html">Admin</label><br>
-  <input type="radio" id="role" name="role" value="Guest">
-  <label for="css">Guest</label><br></br>
-
-    
-<button type="submit" class="btn">Submit</button>
-</form> 
-<br></br>
-
-</div>
+  }
+  </style>
+  <div class="bg-img">
+    <form action="connect.php" onsubmit="return validateform()action="connect.php" method="post" class="container">
+      <h1>User Form</h1><label for="fname"><b>Name:</b></label> <input type="text" placeholder="Enter name" id="fname" name="fname" value=""><br>
+      <br>
+      <label for="email">Email:</label> <input type="text" placeholder="Enter email" id="email" name="email" required=""> <label for="email">Enter password:</label> <input type="password" placeholder="Password" id="password" name="password" required=""> <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" required=""> <label for="branch"><b>Branch</b></label><br>
+      &nbsp; <input type="radio" id="branch" name="branch" value="Computer"> &nbsp; <label for="html">Computer</label><br>
+      &nbsp; <input type="radio" id="branch" name="branch" value="Electrical"> &nbsp; <label for="css">Electrical</label><br>
+      &nbsp; <input type="radio" id="branch" name="branch" value="Machanical"> &nbsp; <label for="javascript">Machanical</label><br>
+      <br>
+      <p>Role:</p>&nbsp; <input type="radio" id="role" name="role" value="Admin"> &nbsp; <label for="html">Admin</label><br>
+      &nbsp; <input type="radio" id="role" name="role" value="Guest"> &nbsp; <label for="css">Guest</label><br>
+      <br>
+      <button type="submit" class="btn">Submit</button>
+    </form><br>
+    <br>
+  </div>-
 </body>
 </html>
-
-
--
