@@ -25,11 +25,13 @@
 </thead>
 <tbody>
 <?php
-$host = "localhost:3308"; //IP of your database
+$host = "localhost"; //IP of your database
 $userName = "root"; //Username for database login
 $userPass = ""; //Password associated with the username
+$database ="stocks"; //name of the database
 
-$connectQuery = mysqli_connect($host,$userName,$userPass,"stocks");
+$connectQuery = mysqli_connect($host,$userName,$userPass,$database);
+
 
 
 if(mysqli_connect_errno()){
@@ -38,7 +40,7 @@ if(mysqli_connect_errno()){
 }else{
     $selectQuery = "SELECT * FROM `users`";
     $result = mysqli_query($connectQuery,$selectQuery);
-    if(mysqli_num_rows($result)>0){
+    if(mysqli_num_rows($result) > 0){
         
         while($row = mysqli_fetch_assoc($result)){ ?>
 
@@ -50,7 +52,9 @@ if(mysqli_connect_errno()){
                     <td><?php echo $row['role']; ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td><?php echo $row['updated_at']; ?></td>
-                    <td><?php echo '<a href="useredit.php?id=' .$row['id']. '">Edit</a>'; ?>
+                    <td><?php echo '<a href="userdelete.php?id=' . $row['full_name'] . '>Delete</a>'; ?>
+                    
+                
 </td>
                     
                 </tr>

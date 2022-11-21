@@ -38,7 +38,7 @@ if(mysqli_connect_errno()){
 }else{
     $selectQuery = "SELECT * FROM `users`";
     $result = mysqli_query($connectQuery,$selectQuery);
-    if(mysqli_num_rows($result)>0){
+    if(mysqli_num_rows($result)==1){
         
         while($row = mysqli_fetch_assoc($result)){ ?>
 
@@ -50,7 +50,7 @@ if(mysqli_connect_errno()){
                     <td><?php echo $row['role']; ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td><?php echo $row['updated_at']; ?></td>
-                    <td><?php echo '<a href="useredit.php?id=' .$row['id']. '">Edit</a>'; ?>
+                    <td><?php echo '<a href="useredit.php?id=' . $a . '">Edit</a>'; ?>
 </td>
                     
                 </tr>
@@ -60,7 +60,7 @@ if(mysqli_connect_errno()){
     }
 
     
-
+6
 }
 ?>
 
