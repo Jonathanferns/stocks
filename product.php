@@ -17,6 +17,7 @@
   <th>status</th>
   <th>created_at</th>
   <th>updated_at</th>
+  <th>action</th>
 </tr>
 </thead>
 <tbody>
@@ -47,6 +48,8 @@ if(mysqli_connect_errno()){
                     <td><?php echo $row['status']; ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td><?php echo $row['updated_at']; ?></td>
+                    <td><input type="button" value="Edit" onclick="editRow(this)">
+   <input type="button" value="Delete" onclick="deleteRow(this)"></td>
                 </tr>
             
    <?php     }

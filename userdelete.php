@@ -51,7 +51,9 @@ if(mysqli_connect_errno()){
                     <td><?php echo $row['role']; ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td><?php echo $row['updated_at']; ?></td>
-                    <td><?php echo '<a href="userdelete.php?id=' . $a . '>Delete</a>'; ?>
+                    <td><?php echo '<a href="userdelete.php?id=' . $row['full_name'] . '>Delete</a>'; ?>
+                    
+                
 </td>
                     
                 </tr>
