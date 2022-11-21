@@ -76,8 +76,8 @@
       <label for="date_of_purchase">Date of purchase:</label> <input type="date" id="purchase" name="purchase" required=""><br>
       <br>
       <p>Branch:</p>&nbsp; <input type="radio" id="branch" name="branch" value="Computer" required="required"> &nbsp; <label for="html">Computer</label><br>
-      &nbsp; <input type="radio" id="branch" name="branch" value="Electrical" required="required"> &nbsp; <label for="css">Electrical</label><br>
-      &nbsp; <input type="radio" id="branch" name="branch" value="Machanical" required="required"> &nbsp; <label for="javascript">Machanical</label><br>
+      &nbsp; <input type="radio" id="branch" name="branch" value="Electrical"> &nbsp; <label for="css">Electrical</label><br>
+      &nbsp; <input type="radio" id="branch" name="branch" value="Machanical"> &nbsp; <label for="javascript">Machanical</label><br>
       <br>
       <label for="quantity">Warranty period(1-7):</label> <input type="number" id="quantity" name="quantity" min="1" max="7" required=""><br>
       <br>

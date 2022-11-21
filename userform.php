@@ -97,7 +97,7 @@ echo '} else {';
 echo 'confirm_password.setCustomValidity(';');';
 echo '}';
 echo '}';
-echo 'confirm_password.setCustomValidity('');';
+echo 'confirm_password.setCustomValidity(';');';
 echo 'password.onchange = validatePassword;';
 echo 'confirm_password.onkeyup = validatePassword;';
 echo '</script>';
