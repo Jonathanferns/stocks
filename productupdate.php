@@ -12,11 +12,11 @@ if(mysqli_connect_errno()){
     exit();
 }
 echo $_GET['id'];
-                    $sql = "DELETE FROM product WHERE id=".$_GET['id'];
+                    $sql = "UPDATE FROM product WHERE id=".$_GET['id'];
                     if (mysqli_query($connectQuery,$sql)) {
-                      echo "Record deleted successfully";
+                      echo "Record updated successfully";
                     } else {
-                      echo "Error deleting record: ";
+                      echo "Error updating record: ";
                     }
                     mysqli_close($connectQuery);
                     ?>

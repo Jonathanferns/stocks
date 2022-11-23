@@ -50,7 +50,8 @@ if(mysqli_connect_errno()){
                     <td><?php echo $row['status']; ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td><?php echo $row['updated_at']; ?></td>
-                    <td><?php echo '<a href="userdelete.php?id=' . $row['id'] . '">Delete</a>'; ?>
+                    <td><?php echo '<a href="productdelete.php?id=' . $row['id'] . '">Delete</a>'; ?>
+                    <td><?php echo '<a href="productedit.php?id=' . $row['id'] . '">Edit</a>'; ?>
         </td>
                 </tr>
             
