@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Users table</title>
+    <title>Product table</title>
 </head>
 <body>
     <table border="1px" style="width:600px; line-height:40px;">
@@ -18,6 +18,8 @@
   <th>created_at</th>
   <th>updated_at</th>
   <th>action</th>
+
+
 </tr>
 </thead>
 <tbody>
@@ -48,8 +50,8 @@ if(mysqli_connect_errno()){
                     <td><?php echo $row['status']; ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td><?php echo $row['updated_at']; ?></td>
-                    <td><input type="button" value="Edit" onclick="editRow(this)">
-   <input type="button" value="Delete" onclick="deleteRow(this)"></td>
+                    <td><?php echo '<a href="userdelete.php?id=' . $row['id'] . '">Delete</a>'; ?>
+        </td>
                 </tr>
             
    <?php     }
